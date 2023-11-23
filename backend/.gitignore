@@ -1,0 +1,11 @@
+# Based on https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore bun output directory
+bun/
+
+.env
+
+bun.lockb
