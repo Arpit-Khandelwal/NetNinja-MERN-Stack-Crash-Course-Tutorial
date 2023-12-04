@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const Schema = new mongoose.Schema
+const { Schema } = mongoose;
 
 const WorkoutSchema = new Schema({
     title: {
@@ -17,4 +17,6 @@ const WorkoutSchema = new Schema({
     }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Workout', WorkoutSchema);
+
+const WorkoutModel = mongoose.model('WorkoutModel', WorkoutSchema);
+export default WorkoutModel;

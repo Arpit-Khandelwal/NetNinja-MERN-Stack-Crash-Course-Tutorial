@@ -43,7 +43,7 @@ app.use('/api/workouts', workoutRouter);
 // Connect to MongoDB database
 mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
-        console.log('Connected to MongoDB database');
+        
         // Start the server and listen on the port specified in the environment variables
         app.listen(process.env.PORT, () => {
             console.log('Server running on port', process.env.PORT);
