@@ -1,35 +1,31 @@
 // Import express
 import express from 'express';
 
-// Create router
+// Router
 const router = express.Router();
 
-// Root route
+// Get all workouts
 router.get('/', (req, res) => {
-    // Send JSON response
     res.json({ path: '/', message: 'Get all workouts' });
 });
 
-
+// Get workout by ID
 router.get('/:id', (req, res) => {
-    // Send JSON response
-    res.json({ message: 'Get workout info for', id: req.params.id });
+    res.json({ message: 'Get workout', id: req.params.id });
 });
 
+// Create workout
 router.post('/', (req, res) => {
-    // Send JSON response
-    res.json({ message: 'Create new workout' });
+    res.json({ message: 'Create workout' });
 });
 
+// Update workout
 router.patch('/:id', (req, res) => {
-    // Send JSON response
     res.json({ message: 'Update workout' });
 });
 
+// Delete workout
 router.delete('/:id', (req, res) => {
-    // Send JSON response
-    res.json({ message: 'Delete workout' });
-});
 
 // Export router
 export default router;
